@@ -1,9 +1,9 @@
 @import "main.less";
 
 .categorie{
-	width: 90%;
+	width: 97%;
 	margin: auto;
-	margin-top: @lg-margin;
+	margin-top: 2*@lg-margin;
 }
 
 .categorie_title{
@@ -20,28 +20,79 @@
 		background-color: @default_color_red;
 		margin: 0;
 		display: inline-block;
-		padding-left: @lg-margin;
-		padding-right: @lg-margin;
+		padding-left: 2%;
+		padding-right: 2%;
+		min-width: 31%;
 		color: white;
 	}
 }
 
 .categorie_content{
+	padding: @m-margin 0;
+
+	border-style: solid;
+	border-color: #999;
+	border-width: 0 0 3px 0;
+
+	.selectedItem{
+		width: 100%;
+	}
+
 	.listItem{
+		text-align: left;
+
 		.item{
-			background-color: #FFF9;
+			display: inline-block;
+			background-color: none;
+			position: relative;
+			margin: @m-margin 0;
 
-			border-style: solid;
+			/*border-style: solid;
 			border-color: #FFF;
-			border-width: 6px;
+			border-width: 6px;*/
 
-			.item_img{
-				padding: 0;
-			}
 			img{
-				margin: @sm-margin;
 				width: 100%;
+				height: 100px;
+				//border-radius: @m-margin;
+			}
+
+			.item_label{
+				position: absolute;
+				bottom: 0;
+				left: 10%;
+				width: 80%;
+				background-color: #FFFD;
+				//border-radius: @m-margin;
+				color: @default_color_red;
+				text-align: center;
+				overflow: hidden;
+
+				p{
+					margin: 0;
+				}
+				.title{
+					font-weight: bold;
+				}
+				.description{
+					display: none;
+				}
 			}
 		}
+
+		.item:hover{
+			cursor: pointer;
+			.item_label{
+				height: 100%;
+
+				.description{
+					display: inherit;
+				}
+			}
+		}
+	}
+
+	.selectedItem_invisible, .list_invisible{
+		display: none;
 	}
 }

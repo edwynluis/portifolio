@@ -6,30 +6,48 @@
 
   <div class="page_center container">
     <div class="page_content row">
-      <div class="central_info col-8">
+      <div class="central_info col-9">
 
         <div class="categorie">
           <div class="categorie_title">
             <p>Artificial Intelligence</p>
           </div>
           <div class="categorie_content">
-            <div class="selectedItem">
+            <div class="selectedItem" [ngClass]="{'selectedItem_invisible': !isSelectedCategorie(0)}">
             </div>
-            <div class="listItem container">
-              <div class="row">
 
-                <div class="item col-4">
-                  <img src="../assets/img/projects/astar_sample.png" alt="A star">
-                  <span class="item_label">A star</span>
+            <div class="listItem row" [ngClass]="{'list_invisible': isSelectedCategorie(0)}">
+
+              <div class="item col-4" (click)="selectItem(0,0)">
+                <img src="../assets/img/projects/astar_sample.png" alt="A star">
+                <div class="item_label">
+                  <p class="title">A star</p>
+                  <p class="description">Description</p>
                 </div>
-                
               </div>
+
+              <div class="item col-4" (click)="selectItem(0,1)">
+                <img src="../assets/img/projects/flocking_sample.png" alt="Flocking">
+                <div class="item_label">
+                  <p class="title">Flocking</p>
+                  <p class="description">Description</p>
+                </div>
+              </div>
+
+              <div class="item col-4" (click)="selectItem(0,2)">
+                <img src="../assets/img/projects/genetic_sample.png" alt="Genetic">
+                <div class="item_label">
+                  <p class="title">Genetic</p>
+                  <p class="description">Description</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
       </div>
-      <div class="lateral_info col-4">
+      <div class="lateral_info col-3">
         EEEE
       </div>
     </div>

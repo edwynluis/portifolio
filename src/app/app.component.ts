@@ -14,9 +14,15 @@ export class AppComponent {
   selectItem( categorie, item ){
   	this.selectedCategorie = categorie;
   	this.selectedItem = item;
+
+    //console.log(categorie+''+item);
   };
 
   isSelected( categorie, item ){
   	return this.selectedCategorie == categorie && this.selectedItem == item;
+  };
+
+  isSelectedCategorie( categorie ){
+    return this.selectedCategorie == categorie;
   };
 }
