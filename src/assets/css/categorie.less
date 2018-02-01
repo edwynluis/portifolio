@@ -1,0 +1,47 @@
+@import "main.less";
+
+.categorie{
+	width: 90%;
+	margin: auto;
+	margin-top: @lg-margin;
+}
+
+.categorie_title{
+	width: 100%;
+
+	text-align: left;
+
+	border-style: solid;
+	border-color: #999;
+	border-width: 0 0 3px 0;
+
+	p{
+		font-size: 1.3rem;
+		background-color: @default_color_red;
+		margin: 0;
+		display: inline-block;
+		padding-left: @lg-margin;
+		padding-right: @lg-margin;
+		color: white;
+	}
+}
+
+.categorie_content{
+	.listItem{
+		.item{
+			background-color: #FFF9;
+
+			border-style: solid;
+			border-color: #FFF;
+			border-width: 6px;
+
+			.item_img{
+				padding: 0;
+			}
+			img{
+				margin: @sm-margin;
+				width: 100%;
+			}
+		}
+	}
+}
