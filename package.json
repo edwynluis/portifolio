@@ -12,7 +12,7 @@
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod"
   },
-    "engines":{
+  "engines":{
     "node": "8.9.4",
     "npm": "5.6.0"
   },
@@ -31,9 +31,7 @@
     "core-js": "^2.4.1",
     "express": "^4.16.2",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.19",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
@@ -50,5 +48,7 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
+  },
+  "devDependencies": {
   }
 }
